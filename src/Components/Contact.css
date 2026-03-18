@@ -1,0 +1,67 @@
+.container-fluid {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.conclusion {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: justify;
+  font-size: 24px;
+  color: #00072d;
+  max-width: 1200px;
+  animation: zoom forwards 2s;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.contact {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30px;
+  gap: 15px;
+}
+.contact div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  box-shadow: 0 0 10px #00072d;
+  height: 300px;
+  animation: zoom forwards 2s;
+}
+/* @keyframes blend {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+.contact h2 {
+  margin: 20px 0 25px;
+}
+.contact div i {
+  font-size: 40px;
+}
+footer {
+  width: 100%;
+}
+.declaration {
+  position: relative;
+  top: 4rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
