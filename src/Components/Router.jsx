@@ -1,4 +1,3 @@
-
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
@@ -8,17 +7,15 @@ import Home from "./Home";
 
 function Router() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" Component={Header} />
-          <Route exact path="/" Component={Home} />
-          <Route path="/About" Component={About} />
-          <Route path="/Contact" Component={Contact} />
-          <Route path="/Projects" Component={Projects} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Header /> {/* 👈 always visible */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
