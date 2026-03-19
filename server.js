@@ -7,13 +7,18 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static files
+// Static files
 app.use(express.static(path.join(__dirname, "dist")));
 
-// 🔥 FINAL FIX (works in Express v5)
+// React fallback
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
+// 🔥 IMPORTANT
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// 🔥 MUST listen properly
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
